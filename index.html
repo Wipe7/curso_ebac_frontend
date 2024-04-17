@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Cadastre</title>
+
+</head>
+<body>
+    <header>           
+        <h1>
+        Cadastre-se já!
+    </H1>
+        <div class="container">
+            <form>
+                <div class="input-box">
+                    
+                    <input type="text" placeholder="Nome Completo" id="nome">
+                    <br><br>
+                    <input type="email" placeholder="email" id="email">
+                    <br><br>
+                    <input type="text"placeholder="telefone" id="telefone">
+                    <br><br>
+                    <input type="text"placeholder="CPF" id="cpf">
+                    <br><br>
+                    <input type="text"placeholder="endereço" id="endereço">
+                    <br><br>
+                    <input type="text"placeholder="CEP" id="cep">
+                    <br><br>
+                    <button type="submit" class="btn"> Inscreva-se </button>
+                    <div class="frase">
+                    <p> Venha para nossa equipe! </p>
+                </div>
+                </div>
+            </form>
+        </div>
+    </header>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./JS/jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function()  {
+            $('#telefone').mask('(00) 00000-0000')
+            $('#cpf').mask('000000000-00')
+            $('#cep').mask('00000-000')
+        })
+    </script>
+
+    
+</body>
+</html>
