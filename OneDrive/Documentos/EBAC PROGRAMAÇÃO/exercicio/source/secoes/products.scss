@@ -1,0 +1,46 @@
+@use '../config/variables';
+@use '../config/mixins';
+
+.products {
+margin-top: 40px;
+display: grid;
+grid-template-columns: repeat(3, 32.66%);
+column-gap: 1%;
+row-gap: 4%;
+width: 100%;
+
+@include mixins.responsive(1023px) {
+    grid-template-columns: repeat(2, 48.5%);
+    column-gap: 3%;
+}
+
+@include mixins.responsive(767px) {
+    display: block;
+
+    .product-item {
+    margin-bottom: 32px;
+    }
+}
+
+.product-item {
+    img {
+    width: 100%;
+    border-radius: variables.$product-border-radius;
+    }
+
+    .product-button {
+    display: block;
+    background-color: variables.$product-btn-color;
+    color: variables.$text-color;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: variables.$product-btn-radius;
+    margin-top: 8px;
+    text-decoration: none;
+
+    &:hover {
+        background-color: variables.$product-btn-hover;
+    }
+    }
+}
+}

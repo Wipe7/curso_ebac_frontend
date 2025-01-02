@@ -1,0 +1,47 @@
+@use 'variables';
+
+body {
+background-color: variables.$bg-color;
+}
+
+.container {
+max-width: variables.$container-max-width;
+width: 100%;
+margin: 0 auto;
+
+@media screen and (max-width: 1023px) {
+    max-width: 80%;
+}
+}
+
+header {
+background-color: variables.$header-bg-color;
+position: sticky;
+top: 0;
+left: 0;
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: variables.$container-padding 0;
+}
+
+.menu {
+    display: flex;
+
+    li {
+    font-weight: bold;
+    margin-left: 24px;
+
+    a {
+        color: variables.$text-color;
+        text-decoration: none;
+    }
+    }
+}
+}
+
+section {
+padding: 56px 0;
+}

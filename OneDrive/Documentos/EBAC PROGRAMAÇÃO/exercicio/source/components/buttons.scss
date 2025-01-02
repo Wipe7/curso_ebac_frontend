@@ -1,0 +1,14 @@
+@use '../config/variables';
+
+.button {
+background-color: variables.$product-btn-color;
+color: variables.$text-color;
+padding: 10px 20px;
+border-radius: variables.$product-btn-radius;
+text-align: center;
+text-decoration: none;
+
+&:hover {
+    background-color: variables.$product-btn-hover;
+}
+}
