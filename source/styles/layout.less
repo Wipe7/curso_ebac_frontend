@@ -1,0 +1,26 @@
+body {
+    background-color: @background-color;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+
+    .responsive(medium) {
+        max-width: 80%;
+    }
+}
+
+header {
+    background-color: @primary-color;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container {
+        .flex-center();
+        justify-content: space-between;
+        padding: 16px 0;
+    }
+}

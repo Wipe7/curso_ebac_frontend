@@ -1,0 +1,88 @@
+.menu {
+    display: flex;
+
+    li {
+        font-weight: bold;
+        margin-left: 24px;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+.products {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1%;
+    row-gap: 4%;
+
+    .responsive(medium) {
+        grid-template-columns: repeat(2, 48.5%);
+    }
+
+    .responsive(small) {
+        display: block;
+
+        .product-item {
+            margin-bottom: 32px;
+        }
+    }
+
+    .product-item {
+        img {
+            width: 100%;
+            border-radius: 16px;
+        }
+
+        .product-button {
+            display: block;
+            background-color: @secondary-color;
+            color: white;
+            text-align: center;
+            padding: 8px 0;
+            border-radius: 8px;
+            margin-top: 8px;
+            text-decoration: none;
+
+            &:hover {
+                background-color: @hover-color;
+            }
+        }
+    }
+}
+footer {
+    background-color: @primary-color;
+    color: rgb(255, 255, 255);
+    padding: 20px 0;
+    margin-top: 45px;
+
+    .footer-container {
+        @import './source/styles/mixins.less'; // Importa os mixins
+        .flex-center(); // Usa o mixin para centralizar
+        flex-direction: column;
+
+        .footer-list {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin-bottom: 10px;
+
+            li a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .developer-name {
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.flex-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media-breakpoints: {
+    large: 1024px;
+    medium: 767px;
+    small: 480px;
+};
+
+.responsive(@breakpoint) {
+    @value: @media-breakpoints[@{breakpoint}]; // Extrai o valor do mapa
+    @media screen and (max-width: @value) {
+        @arguments();
+    }
+}
